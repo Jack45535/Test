@@ -1,7 +1,41 @@
 ﻿@{
-    ViewBag.Title = "About";
+    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\Jack\source\repos\WebApplication2\WebApplication2\Wav\test.wav");
+    player.Stop();
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
 
-<p>Use this area to provide additional information.</p>
+<style>
+    .col-md-2 {
+        font-size:50px;;
+    }
+</style>
+
+<div class="row">
+    <label class="col-md-2">
+        Music
+    </label>
+    <div class="col-md-1">
+        <input type="checkbox" id="MusicTest" style="width: 50px; height: 50px;">
+    </div>
+</div>
+
+<script>
+
+
+    function SoundOnNdOff()
+    {
+
+        if (button.click == true)
+        {
+            console.log('On');
+        }
+
+        if (switcher == false)
+        {
+            console.log('Off')
+        }
+
+
+    }
+</script>
+
+
