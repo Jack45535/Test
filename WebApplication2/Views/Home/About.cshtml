@@ -1,41 +1,47 @@
 ﻿@{
-    System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Users\Jack\source\repos\WebApplication2\WebApplication2\Wav\test.wav");
-    player.Stop();
+
+
+
 }
 
 <style>
     .col-md-2 {
-        font-size:50px;;
+        font-size: 50px;
     }
 </style>
 
+
 <div class="row">
-    <label class="col-md-2">
+    <label class="col-md-2" id="test">
         Music
     </label>
     <div class="col-md-1">
-        <input type="checkbox" id="MusicTest" style="width: 50px; height: 50px;">
+        <input type="checkbox" id="MusicTest" onclick="myFuntion()" style="width: 50px; height: 50px;">
+        <button onclick="changeColor('blue')">blue</button>
+        <button onclick="changeColor('green')">green</button>
+        <button onclick="changeColor('yellow')">yellow</button>
     </div>
 </div>
 
 <script>
-
-
-    function SoundOnNdOff()
-    {
-
-        if (button.click == true)
-        {
-            console.log('On');
-        }
-
-        if (switcher == false)
-        {
-            console.log('Off')
-        }
-
-
+    function changeColor(newColor) {
+        var elem = document.getElementById('test');
+        elem.style.color = newColor;
     }
+
+    function myFunction() {
+  // Get the checkbox
+  var checkBox = document.getElementById("MusicTest");
+  // If the checkbox is checked, display the output text
+  if (checkBox.checked == true){
+    console.log('Checkbox is checked')
+  } else {
+    console.log('Checkbox is unchecked')
+  }
+}
 </script>
 
+<audio controls="controls">
+    <source src="Wav\test.wav" type="audio/mp3">
+</audio>
 
